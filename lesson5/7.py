@@ -13,7 +13,8 @@
 # Подсказка: использовать менеджеры контекста.
 import json
 
-data = {}
+firms = {}
+data = []
 
 with open('task_7.txt') as f_obj:
     average = 0
@@ -22,8 +23,9 @@ with open('task_7.txt') as f_obj:
         profit = int(line_list[2]) - int(line_list[3])
         if profit >= 0:
             average += profit
-        data[line_list[0]] = profit
-    data['average_profit'] = average
+        firms[line_list[0]] = profit
+    data.append(firms)
+    data.append({'average_profit': average})
 
 with open('result_7.txt', 'w') as out_f:
     json.dump(data, out_f)
