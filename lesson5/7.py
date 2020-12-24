@@ -18,14 +18,16 @@ data = []
 
 with open('task_7.txt') as f_obj:
     average = 0
+    success_firms = 0
     for line in f_obj:
         line_list = line.split()
         profit = int(line_list[2]) - int(line_list[3])
         if profit >= 0:
             average += profit
+            success_firms += 1
         firms[line_list[0]] = profit
     data.append(firms)
-    data.append({'average_profit': average})
+    data.append({'average_profit': round(average / success_firms, 2)})
 
 with open('result_7.txt', 'w') as out_f:
     json.dump(data, out_f)
