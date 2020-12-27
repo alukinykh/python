@@ -1,0 +1,10 @@
+Petrov 10654.96
+Ivanov 22283.38
+Sidorov 25653.91
+Kutuzov 14527.18
+Suvorov 13165.08
+Lebedev 19637.92
+Utkin 26340.00
+Pronin 10944.31
+Onegin 15276.28
+Chadskii 18317.41
